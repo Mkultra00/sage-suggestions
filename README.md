@@ -1,10 +1,15 @@
-# Guiding Light
+# Guiding Light — SHOMER
 
 read the knowledge and give and suggestions for this getting built using lovable.
 
 This project was built with [Lovable](https://lovable.dev).
 
 **Live app**: https://sage-suggestions.lovable.app
+
+## Pitch Deck
+
+- 📊 [Download the SHOMER pitch deck (PPTX)](https://sage-suggestions.lovable.app/__l5e/assets-v1/cef57275-700e-49f3-9ed3-ace12d41c7fa/SHOMER-PITCH-3.pptx)
+- 🖥️ [View the deck in the app](https://sage-suggestions.lovable.app/deck)
 
 ## Build with Lovable
 
