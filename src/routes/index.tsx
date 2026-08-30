@@ -73,7 +73,7 @@ function Landing() {
                 speak up and to listen. Shomer is a living record, collecting reports and creating
                 visualizations, free and open to all.
               </p>
-              <div className="mt-6 flex w-full flex-col items-center gap-3 md:flex-row">
+              <div className="mt-6 flex w-full flex-col items-center gap-3 md:flex-row md:flex-wrap">
                 <Link
                   to="/map"
                   className="flex w-full items-center justify-center rounded-sm bg-marker px-8 py-4 text-base font-semibold uppercase tracking-[0.12em] text-marker-foreground transition-opacity hover:opacity-90 md:inline-flex md:w-auto"
@@ -93,6 +93,13 @@ function Landing() {
                   className="flex w-full items-center justify-center rounded-sm border border-primary-foreground/40 px-8 py-4 text-base font-semibold uppercase tracking-[0.12em] text-primary-foreground transition-colors hover:bg-primary-foreground/10 md:inline-flex md:w-auto"
                 >
                   See Incident Map
+                </a>
+                <a
+                  href="/SHOMER-Presentation.pptx"
+                  download
+                  className="flex w-full items-center justify-center rounded-sm border border-primary-foreground/40 px-8 py-4 text-base font-semibold uppercase tracking-[0.12em] text-primary-foreground transition-colors hover:bg-primary-foreground/10 md:inline-flex md:w-auto"
+                >
+                  Download Deck
                 </a>
               </div>
               <p className="mt-2 text-center text-xs text-primary-foreground/60 md:text-left">
