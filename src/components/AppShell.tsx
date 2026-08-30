@@ -34,17 +34,7 @@ export function AppShell({ children }: { children: ReactNode }) {
         </div>
       </header>
 
-      <main className="flex-1 pb-20">{children}</main>
-
-      <a
-        href="tel:911"
-        className="fixed inset-x-0 bottom-0 z-40 mx-auto flex w-full max-w-md items-center justify-center gap-2 border-t border-destructive/40 bg-destructive px-4 py-3 text-destructive-foreground"
-      >
-        <Phone className="size-4" aria-hidden />
-        <span className="text-sm font-semibold tracking-wide">
-          In danger right now? Call 911
-        </span>
-      </a>
+      <main className="flex-1">{children}</main>
     </div>
   );
 }

@@ -89,8 +89,7 @@ function Index() {
       </section>
 
       <p className="mt-10 px-5 text-xs leading-relaxed text-muted-foreground">
-        Not an emergency service. If anyone is injured, threatened with a weapon, or in the path of
-        violence, call 911 first. Demonstration build — all mapped data is fabricated.
+        Not an emergency service. Demonstration build — all mapped data is fabricated.
       </p>
     </AppShell>
   );
