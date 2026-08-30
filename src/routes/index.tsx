@@ -101,14 +101,17 @@ function Landing() {
             <h2 className="font-display text-2xl text-foreground md:text-3xl">About the IAC</h2>
             <div className="mt-5 grid gap-5 md:grid-cols-2 md:gap-10">
               <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
-                The Israeli-American Council builds an engaged Israeli-American community that
-                strengthens the Israeli and Jewish identity of its members, the American Jewish
-                community, and the bond between the people of the United States and Israel.
+                The mission of the Israeli-American Council (IAC) is to build an engaged and united
+                Israeli-American community that strengthens the Israeli and Jewish identity of our
+                next generation, the American Jewish community, and the bond between the peoples of
+                the United States and the State of Israel.
               </p>
               <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
-                This incident tracker is part of that work: giving the community a reliable,
-                verified record of antisemitic activity in Manhattan so that advocacy, education,
-                and safety efforts are grounded in documented fact.
+                The scourge of antisemitism and Israel hatred both in our physical world and online,
+                reminds us to stay united and use our voices to stand up for each other. Amidst
+                hostility, the IAC takes action against hate through our individual programs and civic
+                engagement initiatives. We also continue to provide educational and communal resources
+                to empower each other during these difficult times.
               </p>
             </div>
             <a
