@@ -85,14 +85,22 @@ export const analyzeIncident = createServerFn({ method: "POST" })
       .filter(Boolean)
       .join("\n");
 
+    const jsonInstruction = `Respond with ONLY a JSON object, no markdown fences, matching exactly:
+{"tier":"T1|T2|T3|T4","category":"snake_case_category","confidence":0.0-1.0,"summary":"...","rationale":"...","headline":"...","immediate":["..."],"steps":[{"window":"Next 30 minutes","action":"...","why":"..."}],"contacts":[{"name":"...","what":"...","detail":"phone/url/office","urgency":"now|today|this_week"}],"deadlines":[{"label":"...","window":"..."}]}`;
+
     const result = await generateText({
       model: gateway("google/gemini-3.7-flash"),
-      system: SYSTEM_PROMPT,
+      system: `${SYSTEM_PROMPT}\n\n${jsonInstruction}`,
       prompt,
-      output: Output.object({ schema: PlanSchema }),
     });
 
-    const plan = await result.output;
+    const raw = result.text.replace(/^\s*```(?:json)?/i, "").replace(/```\s*$/, "").trim();
+    const start = raw.indexOf("{");
+    const end = raw.lastIndexOf("}");
+    if (start === -1 || end === -1) throw new Error("Could not read a plan from the model.");
+    const plan = PlanSchema.parse(JSON.parse(raw.slice(start, end + 1)));
+
+
 
     let incidentId: string | null = null;
 
