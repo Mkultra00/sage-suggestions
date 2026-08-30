@@ -61,7 +61,7 @@
   --card-foreground: oklch(0.97 0.004 250);
   --popover: oklch(0.21 0.014 250);
   --popover-foreground: oklch(0.97 0.004 250);
-  --primary: oklch(0.8 0.148 78);
+  --primary: oklch(0.82 0.15 88);
   --primary-foreground: oklch(0.18 0.02 70);
   --secondary: oklch(0.28 0.016 250);
   --secondary-foreground: oklch(0.97 0.004 250);
@@ -73,7 +73,7 @@
   --destructive-foreground: oklch(0.98 0.01 25);
   --border: oklch(0.32 0.016 250);
   --input: oklch(0.3 0.016 250);
-  --ring: oklch(0.8 0.148 78);
+  --ring: oklch(0.82 0.15 88);
   --tier-1: oklch(0.63 0.235 26);
   --tier-2: oklch(0.72 0.18 48);
   --tier-3: oklch(0.82 0.15 88);
@@ -133,12 +133,12 @@
   --secondary-foreground: oklch(15% 0.004 95);
   --muted: oklch(95% 0.01 95);
   --muted-foreground: oklch(48% 0.012 95);
-  --accent: oklch(85% 0.16 88);
+  --accent: oklch(82% 0.15 88);
   --accent-foreground: oklch(15% 0.004 95);
   --border: oklch(90% 0.01 95);
   --input: oklch(90% 0.01 95);
-  --ring: oklch(82% 0.17 88);
-  --marker: oklch(84% 0.17 88);
+  --ring: oklch(82% 0.15 88);
+  --marker: oklch(82% 0.15 88);
   --marker-foreground: oklch(15% 0.004 95);
   --font-display: "Libre Baskerville", Georgia, serif;
   color-scheme: light;
