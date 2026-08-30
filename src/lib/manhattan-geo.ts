@@ -1,5 +1,5 @@
 // Approximate outline of Manhattan island (plus Roosevelt Island omitted) for map framing.
-export const MANHATTAN_OUTLINE: GeoJSON.Feature<GeoJSON.Polygon> = {
+export const MANHATTAN_OUTLINE = {
   type: "Feature",
   properties: {},
   geometry: {
