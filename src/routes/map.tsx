@@ -5,6 +5,7 @@ import { AppShell } from "@/components/AppShell";
 import { supabase } from "@/integrations/supabase/client";
 import { TIERS, TIER_ORDER, type Tier } from "@/lib/tiers";
 import type { MapPoint } from "@/components/IncidentMap";
+import angelAvatar from "@/assets/ezekiel-angel.png";
 
 const IncidentMap = lazy(() => import("@/components/IncidentMap"));
 
