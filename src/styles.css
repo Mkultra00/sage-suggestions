@@ -43,9 +43,12 @@
   --color-tier-2: var(--tier-2);
   --color-tier-3: var(--tier-3);
   --color-tier-4: var(--tier-4);
+  --color-marker: var(--marker);
+  --color-marker-foreground: var(--marker-foreground);
   --font-sans: "Barlow", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Bebas Neue", "Barlow", ui-sans-serif, sans-serif;
   --font-mono: ui-monospace, "SFMono-Regular", monospace;
+
 }
 
 :root {
