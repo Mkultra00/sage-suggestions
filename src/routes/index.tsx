@@ -77,7 +77,7 @@ function Landing() {
                 to="/map"
                 className="mt-6 flex w-full items-center justify-center rounded-sm bg-marker px-8 py-4 text-base font-semibold uppercase tracking-[0.12em] text-marker-foreground transition-opacity hover:opacity-90 md:inline-flex md:w-auto"
               >
-                View Incidents
+                Open Shomer — View Incidents
               </Link>
               <p className="mt-2 text-center text-xs text-primary-foreground/60 md:text-left">
                 Free to use. No account required to browse the map.
