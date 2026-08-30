@@ -154,46 +154,6 @@ function Landing() {
           </div>
         </section>
 
-        <section className="bg-background">
-          <div className="mx-auto max-w-5xl px-5 py-12 md:py-16">
-            <h2 className="font-display text-2xl text-foreground md:text-3xl">
-              How reporting works
-            </h2>
-            <ol className="mt-6 space-y-6 md:grid md:grid-cols-3 md:gap-8 md:space-y-0">
-              {[
-                {
-                  n: "01",
-                  t: "Submit",
-                  b: "A witness, victim, or community member files a report with the date, location, and description of what occurred.",
-                },
-                {
-                  n: "02",
-                  t: "Verify",
-                  b: "Trained reviewers check the account against available evidence and corroborating reports before anything is published.",
-                },
-                {
-                  n: "03",
-                  t: "Publish",
-                  b: "The verified incident is added to the public map and to the running record used for advocacy and safety planning.",
-                },
-              ].map((s) => (
-                <li key={s.n} className="border-t border-border pt-4">
-                  <span className="font-display text-3xl text-marker">{s.n}</span>
-                  <h3 className="mt-2 text-sm font-semibold uppercase tracking-[0.1em] text-foreground">
-                    {s.t}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.b}</p>
-                </li>
-              ))}
-            </ol>
-            <Link
-              to="/report"
-              className="mt-8 inline-flex items-center justify-center rounded-sm bg-primary px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-primary-foreground transition-opacity hover:opacity-90"
-            >
-              Start a report
-            </Link>
-          </div>
-        </section>
       </main>
 
       <footer className="bg-primary text-primary-foreground">
