@@ -75,16 +75,16 @@ function Landing() {
               </p>
               <div className="mt-6 flex w-full flex-col items-center gap-3 md:flex-row">
                 <Link
-                  to="/report"
+                  to="/map"
                   className="flex w-full items-center justify-center rounded-sm bg-marker px-8 py-4 text-base font-semibold uppercase tracking-[0.12em] text-marker-foreground transition-opacity hover:opacity-90 md:inline-flex md:w-auto"
                 >
-                  Start a Report
+                  Open Shomer — View Incidents
                 </Link>
                 <Link
-                  to="/map"
+                  to="/report"
                   className="flex w-full items-center justify-center rounded-sm border border-primary-foreground/40 px-8 py-4 text-base font-semibold uppercase tracking-[0.12em] text-primary-foreground transition-colors hover:bg-primary-foreground/10 md:inline-flex md:w-auto"
                 >
-                  Open Shomer — View Incidents
+                  Start a Report
                 </Link>
                 <a
                   href="/incident-map/index.html"
