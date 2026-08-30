@@ -68,10 +68,10 @@ function Landing() {
                 SHOMER: Incident to Action
               </h1>
               <p className="mt-3 max-w-prose text-[0.8rem] leading-relaxed text-primary-foreground/85 md:mt-4 md:text-base">
-                This platform collects, verifies, and maps reports of antisemitic incidents
-                throughout Manhattan, turning scattered accounts into a clear public record. Every
-                submission is reviewed before publication so residents, community leaders,
-                journalists, and law enforcement can see where and how often these events occur.
+                Every New Yorker deserves to feel safe and welcome in our city. Jews are no
+                exception. With anti-semitism on the rise, now more than ever it's important to
+                speak up and to listen. Shomer is a living record, collecting reports and creating
+                visualizations, free and open to all.
               </p>
               <div className="mt-6 flex w-full flex-col items-center gap-3 md:flex-row">
                 <Link
