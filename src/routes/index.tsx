@@ -139,6 +139,29 @@ function Landing() {
 
         <section className="border-b border-border bg-secondary">
           <div className="mx-auto max-w-5xl px-5 py-12 md:py-16">
+            <h2 className="font-display text-2xl text-foreground md:text-3xl">Tech stack</h2>
+            <ul className="mt-6 grid gap-4 md:grid-cols-3">
+              {[
+                { t: "Frontend", b: "React 19 + TanStack Start (SSR), Tailwind CSS v4, MapLibre GL with Carto basemaps." },
+                { t: "Backend", b: "TanStack server functions on Cloudflare Workers; PostgreSQL via Lovable Cloud with strict row-level security." },
+                { t: "AI", b: "Lovable AI Gateway — Gemini 3.7 Flash classifies incidents into T1–T4 tiers and drafts action plans." },
+                { t: "Data & privacy", b: "Fuzzed map coordinates, private evidence storage with EXIF stripping for uploads." },
+                { t: "Voice & input", b: "Browser speech-to-text for hands-free incident reporting." },
+                { t: "Safety by design", b: "SHOMER addresses conduct and process — it never identifies, names, or adjudicates a person." },
+              ].map((f) => (
+                <li key={f.t} className="border-l-2 border-marker bg-card px-5 py-5">
+                  <h3 className="text-sm font-semibold uppercase tracking-[0.1em] text-card-foreground">
+                    {f.t}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{f.b}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <section className="border-b border-border bg-background">
+          <div className="mx-auto max-w-5xl px-5 py-12 md:py-16">
             <h2 className="font-display text-2xl text-foreground md:text-3xl">What the app does</h2>
             <ul className="mt-6 grid gap-4 md:grid-cols-2">
               {[
