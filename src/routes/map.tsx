@@ -5,6 +5,7 @@ import { AppShell } from "@/components/AppShell";
 import { supabase } from "@/integrations/supabase/client";
 import { TIERS, TIER_ORDER, type Tier } from "@/lib/tiers";
 import type { MapPoint } from "@/components/IncidentMap";
+import angelAvatar from "@/assets/ezekiel-angel.png";
 
 const IncidentMap = lazy(() => import("@/components/IncidentMap"));
 
@@ -65,11 +66,22 @@ function MapPage() {
   return (
     <AppShell>
       <div className="px-5 pt-5">
-        <p className="label-caps">Manhattan · last 24 hours</p>
-        <h1 className="display-title mt-1 text-3xl">
-          {isLoading ? "—" : (data?.length ?? 0)} reported incidents
-        </h1>
-        <p className="mt-1 text-xs text-muted-foreground">
+        <div className="flex items-center gap-4">
+          <img
+            src={angelAvatar}
+            alt="Shomer guardian avatar"
+            className="size-16 rounded-full border-2 border-marker object-cover shadow-lg shadow-marker/20"
+            width={64}
+            height={64}
+          />
+          <div>
+            <p className="label-caps">Manhattan · last 24 hours</p>
+            <h1 className="display-title mt-1 text-3xl">
+              {isLoading ? "—" : (data?.length ?? 0)} reported incidents
+            </h1>
+          </div>
+        </div>
+        <p className="mt-3 text-xs text-muted-foreground">
           Points are blurred 150–300 m and times are rounded to the hour.
         </p>
       </div>
