@@ -7,16 +7,17 @@ import { AppShell } from "@/components/AppShell";
 export const Route = createFileRoute("/deck")({
   head: () => ({
     meta: [
-      { title: "SHOMER — Presentation deck" },
+      { title: "SHOMER — Pitch deck" },
       {
         name: "description",
         content:
-          "The SHOMER briefing deck: what the app does, why it matters, who it is for, and the tech stack behind it.",
+          "The SHOMER pitch: the problem, the data, the solution, and how a 90-second report becomes a personal action plan and a public safety map.",
       },
-      { property: "og:title", content: "SHOMER — Presentation deck" },
+      { property: "og:title", content: "SHOMER — Pitch deck" },
       {
         property: "og:description",
-        content: "What SHOMER does, why it matters, who it is for, and the tech stack behind it.",
+        content:
+          "Incident to Action: a living record of antisemitism in New York, and the AI triage that turns reports into response.",
       },
       { property: "og:type", content: "website" },
     ],
@@ -30,76 +31,87 @@ type Slide = {
   body?: string;
   bullets?: string[];
   quote?: string;
+  numbered?: { label: string; text: string }[];
+  columns?: { heading: string; text: string }[];
 };
 
 const slides: Slide[] = [
   {
-    kicker: "An IAC Initiative",
-    title: "SHOMER: Incident to Action",
-    body: "A living record of antisemitic incidents in Manhattan — collecting reports, creating visualizations, and turning reports into safety-first action. Free and open to all.",
+    title: "SHOMER",
+    kicker: "Incident to Action",
+    body: "A living record of antisemitism in New York.",
   },
   {
-    kicker: "What the app does",
-    title: "From report to response",
-    bullets: [
-      "Report an incident in minutes — anonymously if you prefer.",
-      "Every report is AI-triaged into severity tiers T1–T4 with a safety-first action plan.",
-      "Incidents are plotted on a live Manhattan map with fuzzed coordinates to protect privacy.",
-      "Browse, filter, and understand patterns by neighborhood, category, and severity.",
-    ],
+    kicker: "Which track?",
+    title: "Incident to Action",
+    body: "Helping communities respond faster — and building the evidence that makes response possible.",
   },
   {
-    kicker: "Triage tiers",
-    title: "T1–T4 severity triage",
-    bullets: [
-      "T1 — Critical: imminent danger; safety routing and immediate guidance.",
-      "T2 — High: assaults, threats, vandalism; priority action plan with contacts and deadlines.",
-      "T3 — Moderate: harassment and intimidation; documentation and support resources.",
-      "T4 — Informational: lower-severity reports kept on the record.",
-    ],
-    body: "SHOMER addresses conduct and process — it never identifies, names, or adjudicates a person.",
-  },
-  {
-    kicker: "Why it matters",
-    title: "Speak up, and listen",
+    kicker: "The problem",
+    title: "A New Yorker is harassed for being Jewish. What are their options?",
+    body: "Call 911 for something that isn't a 911 emergency. Or tell no one. Most choose the second. The incident is never recorded — so the pattern that would prove a campus, a subway line, or a block needs attention never gets built.",
     quote:
-      "Every New Yorker deserves to feel safe and welcome in our city. Jews are no exception.",
+      "NYPD logged 2,113 anti-Jewish hate crime complaints since 2019. 71% closed with no arrest. Reporting feels like reporting into a void, so people stop.",
+  },
+  {
+    kicker: "The data",
+    title: "The evidence that exists — and what's missing",
     bullets: [
-      "Antisemitism is on the rise; unreported incidents stay invisible.",
-      "A verified, mapped record turns isolated experiences into shared understanding.",
-      "Data empowers communities, institutions, and policymakers to act.",
+      "NYPD hate crime complaints, 77 precincts: 2,113 anti-Jewish incidents 2019–2026 YTD. 252 in 2019, peaking at 371 in 2024. 187 already in 2026.",
+      "Case outcomes: 1,374 felonies, 726 misdemeanors, 611 arrests. 71% of reported incidents end with no arrest — and these are only the reported ones.",
+      "Geography: concentration is local, not citywide. Four of the six worst precincts are in Brooklyn (90th, 66th, 70th, 61st). Response must be local.",
     ],
   },
   {
-    kicker: "Who it is for",
-    title: "Built for the community",
+    kicker: "The solution",
+    title: "A 90-second report becomes an action plan and a public safety map",
+    body: "SHOMER runs on AI that classifies conduct, never people — it will not label a named individual. Reports publish blurred: a coarsened location, an hour instead of a timestamp. Nothing traces back to the reporter.",
+    quote:
+      "Incidents never reported anywhere become evidence a resident can take to a precinct, a dean, or a council member.",
+  },
+  {
+    kicker: "The user",
+    title: "Built for the person who assumes it doesn't count",
     bullets: [
-      "Community members who witness or experience antisemitic incidents.",
-      "Community organizations tracking and responding to local activity.",
-      "Researchers and journalists seeking verified, mapped data.",
-      "Policymakers and civic leaders making informed decisions.",
+      "The New Yorker who just had something happen and assumes it does not count.",
+      "They will never file a police report. They will spend 90 seconds on their phone.",
+      "And the IAC MAGEN volunteer who needs a pattern, not anecdotes.",
     ],
   },
   {
     kicker: "How it works",
-    title: "Report → triage → act",
-    bullets: [
-      "Submit: describe what happened, where, and when — voice input supported.",
-      "Triage: AI classifies severity and drafts an action plan with rationale.",
-      "Publish: privacy-preserving location appears on the public map.",
-      "Act: clear next steps, contacts, and deadlines for each report.",
+    title: "Four steps from incident to action",
+    numbered: [
+      {
+        label: "Safety first",
+        text: '"Are you safe right now?" If it is still happening, we stop and route to emergency help.',
+      },
+      {
+        label: "Capture",
+        text: "Optional photo, location metadata stripped. Skip it if photographing is not safe.",
+      },
+      {
+        label: "Locate and describe",
+        text: "Tag the setting — subway, campus, synagogue. Name the institution, never a person.",
+      },
+      {
+        label: "Plan, then map",
+        text: "AI returns an action plan in seconds. Only then does a blurred point join the map.",
+      },
     ],
   },
   {
-    kicker: "Tech stack",
-    title: "How it's built",
-    bullets: [
-      "React 19 + TanStack Start (SSR) with Tailwind CSS v4.",
-      "TanStack server functions on Cloudflare Workers.",
-      "Lovable AI Gateway — Gemini 3.7 Flash for triage and action plans.",
-      "PostgreSQL via Lovable Cloud with strict row-level security.",
-      "MapLibre GL + Carto basemaps for the incident map.",
-      "Private evidence storage with EXIF stripping for uploads.",
+    kicker: "How success looks",
+    title: "Output and impact",
+    columns: [
+      {
+        heading: "The Output",
+        text: "A concrete next step in under two minutes, no account and no login. Plus a live map of where antisemitism is actually happening in New York — filtered by setting, category, and severity, free and open to all.",
+      },
+      {
+        heading: "The Impact",
+        text: "Reports that would otherwise not exist. Targets at 6 months: 500 first-hand reports across NYC, 60% from people who would not have called police, and 3 IAC MAGEN chapters using SHOMER data with precincts, campuses, or elected officials.",
+      },
     ],
   },
   {
@@ -173,6 +185,42 @@ function DeckPage() {
                 ))}
               </ul>
             )}
+            {slide.numbered && (
+              <ol className="mt-5 max-w-2xl space-y-4">
+                {slide.numbered.map((step, i) => (
+                  <li key={step.label} className="flex gap-4">
+                    <span className="flex size-8 shrink-0 items-center justify-center rounded-full border border-primary/50 text-sm font-semibold text-primary">
+                      {i + 1}
+                    </span>
+                    <div>
+                      <p className="text-sm font-semibold text-foreground md:text-base">
+                        {step.label}
+                      </p>
+                      <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                        {step.text}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            )}
+            {slide.columns && (
+              <div className="mt-5 grid max-w-3xl gap-6 md:grid-cols-2">
+                {slide.columns.map((col) => (
+                  <div
+                    key={col.heading}
+                    className="rounded-lg border border-border bg-background/50 p-4"
+                  >
+                    <p className="text-xs font-semibold uppercase tracking-[0.15em] text-primary">
+                      {col.heading}
+                    </p>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                      {col.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
 
           <div className="flex items-center justify-between border-t border-border px-4 py-3">
@@ -188,7 +236,7 @@ function DeckPage() {
             <div className="flex gap-1.5">
               {slides.map((s, i) => (
                 <button
-                  key={s.title}
+                  key={s.title + i}
                   type="button"
                   aria-label={`Go to slide ${i + 1}`}
                   onClick={() => setIndex(i)}
