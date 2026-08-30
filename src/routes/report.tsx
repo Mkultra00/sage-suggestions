@@ -11,7 +11,6 @@ import {
   Loader2,
   Mic,
   MicOff,
-  Phone,
   X,
 } from "lucide-react";
 import { AppShell } from "@/components/AppShell";
@@ -202,15 +201,9 @@ function SafetyGate({ onContinue }: { onContinue: () => void }) {
       title="Are you safe right now?"
       subtitle="Nothing on this page comes before your safety. Never photograph an active scene."
     >
-      <a
-        href="tel:911"
-        className="flex w-full items-center justify-between rounded-lg bg-destructive px-5 py-4 text-destructive-foreground"
-      >
-        <span className="text-base font-semibold">
-          No — someone is hurt or it&apos;s still happening
-        </span>
-        <Phone className="size-5" aria-hidden />
-      </a>
+      <p className="w-full rounded-lg border border-destructive/50 bg-destructive/15 px-5 py-4 text-base font-semibold text-destructive">
+        If someone is hurt or it&apos;s still happening, stop here and get to safety first.
+      </p>
       <button
         onClick={onContinue}
         className="mt-3 flex w-full items-center justify-between rounded-lg border border-border bg-surface px-5 py-4"
@@ -474,15 +467,9 @@ function DescribeStep({
           <div>
             <p className="text-sm font-semibold">This sounds like it may be ongoing.</p>
             <p className="mt-1 text-xs text-muted-foreground">
-              Stop filling this in and call 911 if there is a weapon, an injury, or the encounter is
+              Stop filling this in if there is a weapon, an injury, or the encounter is
               still happening.
             </p>
-            <a
-              href="tel:911"
-              className="mt-3 inline-flex items-center gap-2 rounded-md bg-destructive px-3 py-2 text-xs font-semibold text-destructive-foreground"
-            >
-              <Phone className="size-3.5" aria-hidden /> Call 911
-            </a>
           </div>
         </div>
       )}
