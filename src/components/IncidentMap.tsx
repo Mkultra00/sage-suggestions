@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import * as maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import { TIERS, type Tier } from "@/lib/tiers";
+import { MANHATTAN_BOUNDS, MANHATTAN_OUTLINE } from "@/lib/manhattan-geo";
 
 export type MapPoint = {
   id: string;
