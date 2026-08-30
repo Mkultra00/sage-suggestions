@@ -430,7 +430,7 @@ function DescribeStep({
     baseText.current = description ? description + " " : "";
     rec.onresult = (e) => {
       let text = "";
-      for (let i = 0; i < e.results.length; i++) text += e.results[i][0].transcript;
+      for (let i = 0; i < e.results.length; i++) text += e.results[i]?.[0]?.transcript ?? "";
       setDescription(baseText.current + text);
     };
     rec.onend = () => setListening(false);
