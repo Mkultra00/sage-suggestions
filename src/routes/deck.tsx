@@ -54,6 +54,11 @@ const slides: Slide[] = [
       "NYPD logged 2,113 anti-Jewish hate crime complaints since 2019. 71% closed with no arrest. Reporting feels like reporting into a void, so people stop.",
   },
   {
+    kicker: "Section",
+    title: "How It Works",
+    body: "From a 90-second report to a personal action plan and a public safety map.",
+  },
+  {
     kicker: "The data",
     title: "The evidence that exists — and what's missing",
     bullets: [
@@ -112,6 +117,15 @@ const slides: Slide[] = [
         heading: "The Impact",
         text: "Reports that would otherwise not exist. Targets at 6 months: 500 first-hand reports across NYC, 60% from people who would not have called police, and 3 IAC MAGEN chapters using SHOMER data with precincts, campuses, or elected officials.",
       },
+    ],
+  },
+  {
+    kicker: "Our team",
+    title: "The people behind SHOMER",
+    bullets: [
+      "[Name 1] — [Role]",
+      "[Name 2] — [Role]",
+      "[Name 3] — [Role]",
     ],
   },
   {
