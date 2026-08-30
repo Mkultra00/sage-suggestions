@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jewish Antisemitism Safety Alert</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+     <div class="header">
+      <h1>Antisemitism Safety Alerts</h1>
+      <p>Antisemitism Incidents in your area</p>
+      <button class="btn" onclick="openNewIncidentModal()" style="margin-top: 10px;">Report New Incident</button>
+    </div>
+    <div id="map"></div>
+    <div class="feed" id="feed"></div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <h2 id="modal-title">Report Incident</h2>
+      
+      <div class="form-group">
+        <label>Incident Type</label>
+        <input type="text" id="modal-type" placeholder="e.g., Harassment, Assault" />
+      </div>
+      
+      <div class="form-group">
+        <label>Location</label>
+        <input type="text" id="modal-location" placeholder="Street, neighborhood" />
+      </div>
+      
+      <div class="form-group">
+        <label>Description</label>
+        <textarea id="modal-description" placeholder="What happened?"></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label>Upload Media (Photo/Video)</label>
+        <input type="file" id="media-input" accept="image/*,video/*" />
+      </div>
+      
+      <div class="preview" id="preview"></div>
+      
+      <button class="btn" onclick="submitIncident()">Submit</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

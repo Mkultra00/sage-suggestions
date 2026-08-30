@@ -73,12 +73,22 @@ function Landing() {
                 submission is reviewed before publication so residents, community leaders,
                 journalists, and law enforcement can see where and how often these events occur.
               </p>
-              <Link
-                to="/map"
-                className="mt-6 flex w-full items-center justify-center rounded-sm bg-marker px-8 py-4 text-base font-semibold uppercase tracking-[0.12em] text-marker-foreground transition-opacity hover:opacity-90 md:inline-flex md:w-auto"
-              >
-                Open Shomer — View Incidents
-              </Link>
+              <div className="mt-6 flex w-full flex-col items-center gap-3 md:flex-row">
+                <Link
+                  to="/map"
+                  className="flex w-full items-center justify-center rounded-sm bg-marker px-8 py-4 text-base font-semibold uppercase tracking-[0.12em] text-marker-foreground transition-opacity hover:opacity-90 md:inline-flex md:w-auto"
+                >
+                  Open Shomer — View Incidents
+                </Link>
+                <a
+                  href="/incident-map/index.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex w-full items-center justify-center rounded-sm border border-primary-foreground/40 px-8 py-4 text-base font-semibold uppercase tracking-[0.12em] text-primary-foreground transition-colors hover:bg-primary-foreground/10 md:inline-flex md:w-auto"
+                >
+                  See Incident Map
+                </a>
+              </div>
               <p className="mt-2 text-center text-xs text-primary-foreground/60 md:text-left">
                 Free to use. No account required to browse the map.
               </p>
