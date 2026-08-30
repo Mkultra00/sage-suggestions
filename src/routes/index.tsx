@@ -94,13 +94,12 @@ function Landing() {
                 >
                   See Incident Map
                 </a>
-                <a
-                  href="/SHOMER-Presentation.pptx"
-                  download
+                <Link
+                  to="/deck"
                   className="flex w-full items-center justify-center rounded-sm border border-primary-foreground/40 px-8 py-4 text-base font-semibold uppercase tracking-[0.12em] text-primary-foreground transition-colors hover:bg-primary-foreground/10 md:inline-flex md:w-auto"
                 >
-                  Download Deck
-                </a>
+                  View Deck
+                </Link>
               </div>
               <p className="mt-2 text-center text-xs text-primary-foreground/60 md:text-left">
                 Free to use. No account required to browse the map.
