@@ -70,7 +70,7 @@ export const MANHATTAN_OUTLINE = {
       ],
     ],
   },
-};
+} as const satisfies { type: "Feature"; properties: Record<string, never>; geometry: { type: "Polygon"; coordinates: number[][][] } };
 
 export const MANHATTAN_BOUNDS: [[number, number], [number, number]] = [
   [-74.06, 40.68],
