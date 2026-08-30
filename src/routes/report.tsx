@@ -11,7 +11,6 @@ import {
   Loader2,
   Mic,
   MicOff,
-  Phone,
   X,
 } from "lucide-react";
 import { AppShell } from "@/components/AppShell";

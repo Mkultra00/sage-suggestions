@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Phone, ShieldCheck, Map, FileText } from "lucide-react";
+import { ShieldCheck, Map, FileText } from "lucide-react";
 import type { ReactNode } from "react";
 
 export function AppShell({ children }: { children: ReactNode }) {
