@@ -139,10 +139,6 @@ function Landing() {
                   b: "See incidents plotted by neighborhood, filtered by date, category, and severity.",
                 },
                 {
-                  t: "Verified records",
-                  b: "Every report is reviewed against supporting details before it appears publicly.",
-                },
-                {
                   t: "Community alerts",
                   b: "Opt in to notifications when activity is documented near where you live or work.",
                 },
