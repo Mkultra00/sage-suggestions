@@ -111,7 +111,7 @@ const slides: Slide[] = [
 
 function DeckPage() {
   const [index, setIndex] = useState(0);
-  const slide = slides[index];
+  const slide = slides[index] ?? slides[0]!;
 
   const go = useCallback(
     (delta: number) => setIndex((i) => Math.min(slides.length - 1, Math.max(0, i + delta))),
